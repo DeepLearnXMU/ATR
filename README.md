@@ -39,7 +39,7 @@ conditional language modeling, and complex semantic
 reasoning to capture source-target translation correspondence
 are required. This is a very suitable platform for
 testing RNN-based models, particularly in terms of
-model capacity. For more details, please see our `Zero`
+model capacity. For more details, please see our [Zero](https://github.com/bzhangGo/zero)
 system.
 
 Throughout our experiments, we mainly use shallow RNN models.
