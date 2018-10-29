@@ -25,12 +25,12 @@ class ATRCell(rnn.RNNCell):
             w = tf.get_variable("w", [x.get_shape()[-1].value, self.num_units])
             u = tf.get_variable("u", [self.num_units, self.num_units])
 
-            q = tf.matmul(x, w)
-            p = tf.matmul(h_, u)
+            p = tf.matmul(x, w)
+            q = tf.matmul(h_, u)
 
             i = tf.sigmoid(p + q)
             f = tf.sigmoid(p - q)
 
-            h = i * q + f * h_
+            h = i * p + f * h_
 
             return h, h
