@@ -42,7 +42,7 @@ testing RNN-based models, particularly in terms of
 model capacity. For more details, please see our `Zero`
 system.
 
-Throughout our experiments, we only use shall RNN models.
+Throughout our experiments, we mainly use shallow RNN models.
 Though recent researches could claim encouraging performance
 with deep architectures, we still believe a shallow model
 is the right way to demonstrate its capability.
@@ -68,6 +68,18 @@ explosion. The equations above are slightly different from those in our paper,
 mainly on the computation of the forget gate `f` where we made a typo in the paper :(.
 
 > In short, these two gates are order-sensitive!
+
+## Optional Designs
+You can also apply non-linearity to the hidden states, which sometimes can improve
+the performance.
+
+For example, 
+* you can change `h = i * p + f * h_prev` to `h = tanh(i * p + f * h_prev))`; or
+* you can change `h = i * p + f * h_prev` to `h = i * tanh(p) + f * h_prev`; or
+* you can just apply `tanh` to `h` for output: `o = tanh(h)` and use `o` for 
+  the following models.
+  
+*Again, these desings are not necessary.*
 
 ## How to use this repository?
 
@@ -102,7 +114,7 @@ CUDA_VISIBLE_DEVICES=0 python pytorch-lm/main.py --cuda --data_dir  $data_dir\
 
 ```
 data_dir=path-to-the-data-dir
-CUDA_VISIBLE_DEVICES=0 python tensorflow-lm/main.py --data_dir=$data_dir
+CUDA_VISIBLE_DEVICES=0 python tensorflow-lm/main.py --data_path=$data_dir
 ```
 
 ## TODO
