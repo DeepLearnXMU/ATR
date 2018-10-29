@@ -71,6 +71,10 @@ mainly on the computation of the forget gate `f` where we made a typo in the pap
 
 ## How to use this repository?
 
+### The dataset
+
+We provide the PTB dataset in the data folder.
+
 ### To use the pytorch-based model
 
 1. requirement
@@ -105,4 +109,4 @@ CUDA_VISIBLE_DEVICES=0 python tensorflow-lm/main.py --data_dir=$data_dir
 * Implement the ATR unit in cuda-level. Welcome contributions in this direction.
 
 ## Contact
-For any question, please free to contact the [first author](B.Zhang@ed.ac.uk).
+For any question, please feel free to contact [Biao Zhang](mailto:B.Zhang@ed.ac.uk).
