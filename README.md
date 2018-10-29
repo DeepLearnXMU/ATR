@@ -98,7 +98,7 @@ CUDA_VISIBLE_DEVICES=0 python pytorch-lm/main.py --cuda --data_dir  $data_dir\
 
 ```
 data_dir=path-to-the-data-dir
-CUDA_VISIBLE_DEVICES=0 python pytorch-lm/main.py --data_dir=$data_dir
+CUDA_VISIBLE_DEVICES=0 python tensorflow-lm/main.py --data_dir=$data_dir
 ```
 
 ## TODO
