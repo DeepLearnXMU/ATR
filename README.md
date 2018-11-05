@@ -70,15 +70,16 @@ mainly on the computation of the forget gate `f` where we made a typo in the pap
 > In short, these two gates are order-sensitive!
 
 ## Optional Designs
-You can also apply non-linearity to the hidden states, which sometimes can improve
+- You can also apply non-linearity to the hidden states, which sometimes can improve
 the performance.
 
-For example, 
-* you can change `h = i * p + f * h_prev` to `h = tanh(i * p + f * h_prev))`; or
-* you can change `h = i * p + f * h_prev` to `h = i * tanh(p) + f * h_prev`; or
-* you can just apply `tanh` to `h` for output: `o = tanh(h)` and use `o` for 
+  For example, 
+  * you can change `h = i * p + f * h_prev` to `h = tanh(i * p + f * h_prev))`; or
+  * you can change `h = i * p + f * h_prev` to `h = i * tanh(p) + f * h_prev`; or
+  * you can just apply `tanh` to `h` for output: `o = tanh(h)` and use `o` for 
   the following models.
-  
+- You can also replace the input gate with `1. - f` in a general manner.  
+
 *Again, these desings are not necessary.*
 
 ## How to use this repository?
