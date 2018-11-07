@@ -118,6 +118,10 @@ data_dir=path-to-the-data-dir
 CUDA_VISIBLE_DEVICES=0 python tensorflow-lm/main.py --data_path=$data_dir
 ```
 
+### Others
+
+For other experiments, see `snli` and `cws`.
+
 ## TODO
 * Implement the ATR unit in cuda-level. Welcome contributions in this direction.
 
