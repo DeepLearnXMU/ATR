@@ -1,5 +1,7 @@
 # ATR ---- A novel recurrent unit for RNN.
 
+> Fork from [ATR](https://github.com/bzhangGo/ATR)
+
 ATR denotes: Addition-Subtraction Twin-Gated Recurrent Unit.
 It relies on a twin gate mechanism that utilizes
 addition and subtraction operation to generate an
